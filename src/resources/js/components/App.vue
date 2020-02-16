@@ -1,7 +1,7 @@
 <template lang="pug">
     div
         notifications.m-2(group='all' position='top right')
-        .p-10.bg-gray-200
+        div(class='p-2 sm:p-10 bg-gray-200')
             .bg-white.rounded.shadow-md
                 section.px-5.pt-6.pb-2.border-b
                     .flex.items-center.justify-between.mb-3

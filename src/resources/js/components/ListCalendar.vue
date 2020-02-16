@@ -7,8 +7,8 @@
                 button.py-2.px-4.rounded.bg-gray-300.text-gray-800(class='hover:bg-gray-400 focus:outline-none' @click='showNextMonth' type='button') >
         table.w-full
             tr.border-t(v-for='eventDay in eventDays' :class='{ "bg-green-100": eventDay.title }')
-                td.p-3(class='w-1/4 md:w-1/6') {{ eventDay.dayLabel }}
-                td.p-3(class='w-3/4 md:w-5/6') {{ eventDay.title }}
+                td.p-3(class='w-1/3 md:w-1/6') {{ eventDay.dayLabel }}
+                td.p-3(class='w-2/3 md:w-5/6') {{ eventDay.title }}
 </template>
 
 <script>
