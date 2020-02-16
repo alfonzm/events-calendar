@@ -39,8 +39,12 @@ export default {
             event: state => state.event,
         }),
     },
+    async mounted() {
+        await this.getEvents()
+    },
     methods: {
         ...mapActions('events', [
+            'getEvents',
             'createEvent',
             'updateEvent',
         ]),

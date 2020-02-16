@@ -36,6 +36,11 @@ export default {
         },
     },
     actions: {
+        async getEvents({ commit }, event) {
+            const { data } = await API.get(`/events`)
+            commit(SET_EVENT, data)
+            return data
+        },
         async updateEvent({ commit }, event) {
             const { data } = await API.put(`/events/${event.id}`, event)
             const updatedEvent = data
