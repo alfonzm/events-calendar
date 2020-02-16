@@ -4,13 +4,13 @@
             label.leading-relaxed Event
                 input.appearance-none.w-full.font-size-base.leading-tight.px-3.py-2.border.border-gray-400.rounded(class='focus:outline-none focus:shadow' type='text' v-model='title' placeholder='My Event')
         .mt-5
-                .flex.-mx-2
-                    div(class='w-1/2 px-2')
-                        label.leading-relaxed From
-                        v-date-picker(v-model='start_date' :popover='popover' :input-props='{placeholder: "MM/DD/YYYY"}')
-                    div(class='w-1/2 px-2')
-                        label.leading-relaxed To
-                        v-date-picker(v-model='end_date' :popover='popover' :input-props='{placeholder: "MM/DD/YYYY"}')
+            .flex.-mx-2
+                div(class='w-1/2 px-2')
+                    label.leading-relaxed From
+                    v-date-picker(v-model='start_date' :popover='popover' :input-props='{placeholder: "MM/DD/YYYY"}')
+                div(class='w-1/2 px-2')
+                    label.leading-relaxed To
+                    v-date-picker(v-model='end_date' :popover='popover' :input-props='{placeholder: "MM/DD/YYYY"}')
         .mt-5
             label.mr-2(v-for='(dayOfWeek, index) in daysOfWeek' :key='index')
                 input(type='checkbox' :value='index' name='days' v-model='days')
