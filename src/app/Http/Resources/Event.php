@@ -14,12 +14,16 @@ class Event extends JsonResource
      */
     public function toArray($request)
     {
-        return [
-            'id' => $this->id,
-            'title' => $this->title,
-            'start_date' => $this->start_date,
-            'end_date' => $this->end_date,
-            'event_days' => EventDay::collection($this->eventDays),
-        ];
+        if(isset($this->id)) {
+            return [
+                'id' => $this->id,
+                'title' => $this->title,
+                'start_date' => $this->start_date,
+                'end_date' => $this->end_date,
+                'event_days' => EventDay::collection($this->eventDays),
+            ];
+        } else {
+            return [];
+        }
     }
 }
